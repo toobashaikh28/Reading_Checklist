@@ -1,0 +1,125 @@
+body {
+    background-color: aliceblue;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2em;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container:hover {
+    box-shadow: 0 6px 12px rgba(74, 142, 202, 0.5);
+}
+
+.heading {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    color: #333;
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.tod-items {
+    width: 100%;
+}
+
+.tod-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    background-color: #fff;
+    padding: 0.8em 1em;
+    margin-bottom: 0.8em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(84, 132, 173, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(74, 142, 202, 0.5);
+}
+
+.item p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.input {
+    width: 100%;
+    margin-bottom: 1.5em;
+}
+
+.input form {
+    display: flex;
+    gap: 0.6em;
+}
+
+.input input {
+    flex: 1;
+    padding: 0.6em 0.8em;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    height: 30px;
+}
+
+.input input:focus {
+    border-color: #4a8eca;
+    box-shadow: 0 0 4px rgba(74,142,202,0.4);
+}
+
+.input button {
+    padding: 0.6em 1em;
+    border: none;
+    border-radius: 6px;
+    background-color: #4a8eca;
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    width: 80px;
+}
+
+.input button:hover {
+    background-color: #357ab8;
+}
+
+.input button:active {
+    transform: scale(0.97);
+}
+

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" th:href="@{/todo.css}" />
+    <title>Reading Checklist</title>
+  </head>
+  <body>
+    <div class="center">
+      <div class="container">
+        <div class="heading">Reading Checklist</div>
+        <div class="input">
+          <form
+            th:action="@{/add}"
+            method="post"
+            style="margin-bottom: 1em; display: flex; gap: 0.5em"
+          >
+            <input
+              type="text"
+              name="title"
+              placeholder="📚 Add a book you want to read...."
+              id=""
+              required
+              style="
+                flex: 1;
+                padding: 0.5em;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              "
+            />
+            <button
+              style="
+                background-color: rgba(0, 136, 255, 0.5);
+                color: white;
+                border: none;
+                padding: 0.5em;
+                border-radius: 4px;
+              "
+              type="submit"
+            >
+              Add
+            </button>
+          </form>
+          <hr />
+        </div>
+        <div class="tod-items">
+          <ul>
+            <li th:each="todo, stat : ${todos}" class="item">
+              <form
+                th:action="@{/toggle/{index}(index=${stat.index})}"
+                method="post"
+              >
+                <input
+                  type="checkbox"
+                  th:checked="${todo.completed}"
+                  onchange="this.form.submit()"
+                />
+              </form>
+
+              <p th:text="${todo.title}">title</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
