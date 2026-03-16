@@ -102,17 +102,17 @@ bash
 http://localhost:8080/
 ```
 
-```yml
-
 ## **🎯 How to Use**
 
-### 📝 Adding a Book:
+```yml
+
+**📝 Adding a Book:**
 html
 1. Type the book title in the input field
 2. Click the "Add" button
 3. Watch it appear instantly in your list!
 
-### 💡 Pro Tips:
+**💡 Pro Tips:**
 Hover over icons to see visual feedback
 All changes are immediate – no save button needed!
 Your list persists until you restart the application
