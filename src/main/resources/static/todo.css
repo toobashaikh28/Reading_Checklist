@@ -50,9 +50,9 @@ body {
 .item {
     display: flex;
     align-items: center;
-    gap: 1em;
     background-color: #fff;
     padding: 0.8em 1em;
+    height: 2em;
     margin-bottom: 0.8em;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(84, 132, 173, 0.3);
@@ -61,12 +61,12 @@ body {
 }
 
 .item:hover {
-    transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(74, 142, 202, 0.5);
 }
 
 .item p {
     margin: 0;
+    font-family: "Goudy Bookletter 1911", serif;
     font-size: 1.1em;
     color: #555;
 }
@@ -123,3 +123,32 @@ input[type="checkbox"] {
     transform: scale(0.97);
 }
 
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-inline: 1em;
+}
+
+.details .edit{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5em;
+}
+
+.details .edit i{
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 1.5em;
+}
+
+.edit .fa-edit:hover{
+color: green;
+}
+
+.edit .fa-trash:hover{
+color: red;
+}

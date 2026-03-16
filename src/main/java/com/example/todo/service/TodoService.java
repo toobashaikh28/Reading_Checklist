@@ -26,5 +26,13 @@ public class TodoService {
     public void toggleTodo(int index) {
         todoRepository.toggleTodo(index);
     }
+
+    public void deleteTodo(int index) {
+        todoRepository.deleteTodo(index);
+    }
+
+    public void editTodo(int index, String title) {
+        todoRepository.editTodo(index, title);
+    }
     
 }

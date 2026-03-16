@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" th:href="@{/todo.css}" />
     <title>Reading Checklist</title>
   </head>
@@ -25,7 +32,8 @@
               style="
                 flex: 1;
                 padding: 0.5em;
-                border: 1px solid #ccc;
+                padding-left: 1em;
+                border: 1px solid rgba(74, 142, 202, 0.5);
                 border-radius: 4px;
               "
             />
@@ -42,7 +50,6 @@
               Add
             </button>
           </form>
-          <hr />
         </div>
         <div class="tod-items">
           <ul>
@@ -58,11 +65,59 @@
                 />
               </form>
 
-              <p th:text="${todo.title}">title</p>
+              <div class="details">
+                <p th:text="${todo.title}">title</p>
+
+                <div class="edit">
+                  <i
+                    class="fa-solid fa-edit"
+                    th:attr="onclick=|editTodo(${stat.index}, '${todo.title}')|"
+                  >
+                  </i>
+
+                  <form
+                    th:action="@{/delete/{index}(index=${stat.index})}"
+                    method="post"
+                  >
+                    <button
+                      type="submit"
+                      style="border: none; background: none"
+                      class="del"
+                    >
+                      <i class="fa-solid fa-trash"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+
+              <form
+                th:id="'editForm-' + ${stat.index}"
+                th:action="@{/update/{index}(index=${stat.index})}"
+                method="post"
+                style="display: none"
+              >
+                <input
+                  type="hidden"
+                  name="title"
+                  th:id="'titleInput-' + ${stat.index}"
+                />
+              </form>
             </li>
           </ul>
         </div>
       </div>
     </div>
+
+    <script>
+      function editTodo(index, currentTitle) {
+        let newTitle = prompt("Edit your book title:", currentTitle);
+
+        if (newTitle && newTitle.trim() !== "") {
+          document.getElementById("titleInput-" + index).value = newTitle;
+
+          document.getElementById("editForm-" + index).submit();
+        }
+      }
+    </script>
   </body>
 </html>

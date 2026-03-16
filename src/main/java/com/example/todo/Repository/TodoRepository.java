@@ -27,6 +27,19 @@ public class TodoRepository {
         }
     }
 
+    public void deleteTodo(int index) {
+        if (index>= 0 && index < todos.size()){
+            todos.remove(index);
+        }
+    }
+
+    public void editTodo(int index, String title) {
+        if (index >= 0 && index < todos.size()){
+            Todo t = todos.get(index);
+            t.setTitle(title);
+        }
+    }
+
     public List<Todo> getAllTodos() {
         return todos;
     }
