@@ -82,10 +82,12 @@ text
 ## **⚡ Quick Start**
 
 **Prerequisites**
+
 Java 17 or higher
 Maven 3.6+
 
 **Installation**
+
 1️⃣ Clone the repository
 ```yml
 bash
