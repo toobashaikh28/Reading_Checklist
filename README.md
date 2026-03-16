@@ -83,11 +83,11 @@ text
 
 ```yaml
 
-### Prerequisites:
+"**Prerequisites:**"
 Java 17 or higher
 Maven 3.6+
 
-### Installation:
+"**Installation:**"
 1️⃣ Clone the repository
 bash
 git clone https://github.com/toobashaikh28/Reading_Checklist.git
@@ -104,8 +104,6 @@ http://localhost:8080/
 
 ## **🎯 How to Use**
 
-```yml
-
 **📝 Adding a Book:**
 html
 1. Type the book title in the input field
@@ -116,7 +114,7 @@ html
 Hover over icons to see visual feedback
 All changes are immediate – no save button needed!
 Your list persists until you restart the application
-```
+
 
 ## **🔮 Future Enhancements**
 - Database Integration – Add MySQL/PostgreSQL support
