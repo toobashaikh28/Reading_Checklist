@@ -81,31 +81,30 @@ text
 
 ## **⚡ Quick Start**
 
-```yaml
-
-"**Prerequisites:**"
+**Prerequisites**
 Java 17 or higher
 Maven 3.6+
 
-"**Installation:**"
+**Installation**
 1️⃣ Clone the repository
+```yml
 bash
 git clone https://github.com/toobashaikh28/Reading_Checklist.git
 cd reading-checklist
-
+```
 2️⃣ Run with Maven
+```yml
 bash
 mvn spring-boot:run
-3️⃣ Open in browser
-
-bash
-http://localhost:8080/
 ```
+3️⃣ Open in browser
+http://localhost:8080/
+
 
 ## **🎯 How to Use**
 
-**📝 Adding a Book:**
-html
+**📝 Adding a Book**
+
 1. Type the book title in the input field
 2. Click the "Add" button
 3. Watch it appear instantly in your list!
