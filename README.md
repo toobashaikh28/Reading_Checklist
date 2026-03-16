@@ -16,12 +16,12 @@
 **Reading Checklist** is a **lightweight web application** built with **Spring Boot** and **Thymeleaf**, allowing users to **track and manage their reading list**.  
 
 ### ✨ **What You Can Do:**
-| Action               | Description                             | Icon 
-|--------              |-------------                            |
-| **Add books**        | Add new titles to your reading list     | 📚   
-| **Edit book titles** | Update book names on the fly            | ✏️  
-| **Mark as read**     | Track your reading progress             | ✔️   
-| **Delete books**     | Remove books you don't want to track    | 🗑️ 
+| Action | Description | Icon |
+|--------|-------------|------|
+| **Add books** | Add new titles to your reading list | 📚 |
+| **Edit book titles** | Update book names on the fly | ✏️ |
+| **Mark as read** | Track your reading progress | ✔️ |
+| **Delete books** | Remove books you don't want to track | 🗑️ |
 
 > 💡 **All operations happen on a single page** – no page reloads, no database required! Data is stored **in-memory**, making it perfect for learning and experimentation.
 
@@ -57,7 +57,12 @@ Frontend:
 Data Layer:
   - In-memory storage (ArrayList)
   - No database required
-📁 Project Structure
+  
+```
+
+## **📁 Project Structure**
+
+```yaml
 text
 📦 reading-checklist
 ├── 📂 src
@@ -71,39 +76,49 @@ text
 │           ├── 📄 templates/todo.html                  # Main UI template
 │           └── 📄 static/todo.css                       # Styling
 └── 📄 pom.xml                                           # Maven configuration
-⚡ Quick Start
-Prerequisites
-Java 17 or higher
 
+```
+
+## **⚡ Quick Start**
+
+```yaml
+
+### Prerequisites:
+Java 17 or higher
 Maven 3.6+
 
-Installation
+### Installation:
 1️⃣ Clone the repository
-
 bash
 git clone https://github.com/toobashaikh28/Reading_Checklist.git
 cd reading-checklist
-2️⃣ Run with Maven
 
+2️⃣ Run with Maven
 bash
 mvn spring-boot:run
 3️⃣ Open in browser
 
 bash
 http://localhost:8080/
-🎯 How to Use
-📝 Adding a Book
+```
+
+```yml
+
+## **🎯 How to Use**
+
+### 📝 Adding a Book:
 html
 1. Type the book title in the input field
 2. Click the "Add" button
 3. Watch it appear instantly in your list!
 
-💡 Pro Tips
+### 💡 Pro Tips:
 Hover over icons to see visual feedback
 All changes are immediate – no save button needed!
 Your list persists until you restart the application
+```
 
-🔮 Future Enhancements
+## **🔮 Future Enhancements**
 - Database Integration – Add MySQL/PostgreSQL support
 - User Authentication – Multiple user support
 - Progress Tracking – Reading stats and progress bars
